@@ -1,6 +1,6 @@
 {
     "python.testing.pytestArgs": [
-        "035_Serarch_Insert_Position"
+        "020_Valid_Parentheses"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
