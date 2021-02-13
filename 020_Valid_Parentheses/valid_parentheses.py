@@ -1,3 +1,5 @@
+import pytest
+
 class Solution:
 
     def isValid(self, s: str) -> bool:
@@ -39,16 +41,23 @@ class Solution:
             return result
 
         return result
-    
-# s = r"()"
-# s = r"()[]{}"
-# s = r"(]"
-# s = r"([)]"
-# s = r"{[]}"
-s = r"(){}}{"
-# s = r"([]){"
-# s = r"[[[]"
 
-test = Solution()
-result = test.isValid(s)
-print(result)
+@pytest.mark.parametrize(("param", "expected_result"),[
+                                                            (r"()", True),
+                                                            (r"()[]{}", True),
+                                                            (r"(]", False),
+                                                            (r"([)]", False),
+                                                            (r"{[]}", True),
+                                                            (r"(){}}{", False),
+                                                            (r"([]){", False),
+                                                            (r"[[[]", False)
+
+                                                        ])
+def test_valid_parentheses(param, expected_result):
+    
+    test = Solution()
+    result = test.isValid(param)
+    assert expected_result == result
+
+
+
