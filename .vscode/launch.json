@@ -5,11 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: 目前檔案",
-            "type": "python",
+            "name": "Python: Debug Specific Pytest Test",
+            "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "module": "pytest",
+            "args": [
+                "-s",
+                "tests/test_circle_queue.py::test_queue_display"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
         }
     ]
 }
