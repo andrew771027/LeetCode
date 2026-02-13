@@ -18,4 +18,4 @@ class Solution:
                 ]
                 return results
 
-        raise ValueError
+        raise ValueError("No two sum solution")
