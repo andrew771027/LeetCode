@@ -3,29 +3,7 @@ from typing import List
 import pytest
 
 from src.linkedlist.lc_021_merge_two_sorted_lists import ListNode, Solution
-
-
-def list_to_linkedlist(nums: List) -> ListNode:
-
-    dummy = ListNode(0)
-    current: ListNode = dummy
-
-    for n in nums:
-        current.next = ListNode(n)
-        current = current.next
-
-    return dummy.next
-
-
-def linkedlist_to_list(node: ListNode) -> List:
-
-    result: List = []
-
-    while node:
-        result.append(node.val)
-        node = node.next
-
-    return result
+from tests.linkedlist.utils.helper import linkedlist_to_list, list_to_linkedlist
 
 
 @pytest.mark.parametrize(
