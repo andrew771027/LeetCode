@@ -28,3 +28,28 @@ def linkedlist_to_list(node: ListNode) -> List:
         node = node.next
 
     return result
+
+
+def list_to_cycle_linkedlist(nums: list, pos: int) -> ListNode:
+    """
+    把 tail 指回某個節點
+    """
+
+    if not nums:
+        return None
+
+    dummy = ListNode(0)
+    current: ListNode = dummy
+    cycle_node: ListNode = None
+
+    for index, val in enumerate(nums):
+        if index != pos:
+            current.next = ListNode(val)
+            current = current.next
+        else:
+            cycle_node = current
+
+    if pos != -1:
+        current.next = cycle_node
+
+    return dummy.next
