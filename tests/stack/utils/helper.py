@@ -2,7 +2,19 @@ from collections import deque
 from typing import List, Optional
 
 
+class Node:
+    """
+    General Tree
+    """
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children or []
+
+
 class TreeNode:
+    """
+    Binary Tree
+    """
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
@@ -61,3 +73,29 @@ def tree_to_list(root: Optional[TreeNode]) -> List[Optional[int]]:
         result.pop()
 
     return result
+
+
+def build_nary_tree(values: List[Optional[int]]) -> Optional[Node]:
+    if not values:
+        return None
+
+    root = Node(values[0])
+    queue = deque([root])
+
+    i = 2
+
+    while queue and i < len(values):
+        parent: Node = queue.popleft()
+        children = []
+
+        while i < len(values) and values[i] is not None:
+            child = Node(values[i])
+            children.append(child)
+            queue.append(child)
+
+            i += 1
+
+        parent.children = children
+        i += 1  # skip null
+
+    return root
