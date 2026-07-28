@@ -1,6 +1,9 @@
 from typing import List, Optional
-from tests.tree.utils.helper import list_to_tree
+
+import pytest
+
 from src.tree.lc_222_count_complete_tree_nodes import Solution
+from tests.tree.utils.helper import list_to_tree
 
 
 @pytest.mark.parametrize(
@@ -33,7 +36,7 @@ from src.tree.lc_222_count_complete_tree_nodes import Solution
         ),
     ],
 )
-def test_count_nodes(values: List[Optional[int]], expected:int):
+def test_count_nodes(values: List[Optional[int]], expected: int):
     root = list_to_tree(values)
-    actual = Solution(root)
+    actual = Solution().countNodes(root)
     assert actual == expected

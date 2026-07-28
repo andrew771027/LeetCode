@@ -11,10 +11,10 @@
             "module": "pytest",
             "args": [
                 "-s",
-                "tests/test_circle_queue.py::test_queue_display"
+                "tests/linkedlist/test_lc_061_rotate_list.py::test_normal_case"
             ],
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": true
         }
     ]
 }
