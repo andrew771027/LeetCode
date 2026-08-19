@@ -1,5 +1,13 @@
 from collections import deque
-from typing import Optional
+from typing import List, Optional
+
+
+class Node:
+    def __init__(
+        self, val: Optional[int] = None, children: Optional[List["Node"]] = None
+    ):
+        self.val = val
+        self.children = children if children is not None else []
 
 
 class TreeNode:
@@ -32,6 +40,32 @@ def list_to_tree(values: list[int]) -> Optional[TreeNode]:
             current.right = TreeNode(values[index])
             queue.append(current.right)
 
+        index += 1
+
+    return root
+
+
+def list_to_nary_tree(values: list[Optional[int]]) -> Optional[Node]:
+    if not values:
+        return None
+
+    root = Node(values[0])
+    queue = deque([root])
+
+    # skip root and fist node
+    index = 2
+
+    while queue and index < len(values):
+        parent: Node = queue.popleft()
+
+        while index < len(values) and values[index] is not None:
+            child = Node(values[index])
+            parent.children.append(child)
+            queue.append(child)
+
+            index += 1
+
+        # skip None separator
         index += 1
 
     return root
