@@ -69,3 +69,30 @@ def list_to_nary_tree(values: list[Optional[int]]) -> Optional[Node]:
         index += 1
 
     return root
+
+def list_to_binary_tree(
+    values: list[Optional[int]],
+) -> Optional[TreeNode]:
+    if not values or values[0] is None:
+        return None
+
+    root = TreeNode(values[0])
+    queue = deque([root])
+    index = 1
+
+    while queue and index < len(values):
+        node = queue.popleft()
+
+        if index < len(values) and values[index] is not None:
+            node.left = TreeNode(values[index])
+            queue.append(node.left)
+
+        index += 1
+
+        if index < len(values) and values[index] is not None:
+            node.right = TreeNode(values[index])
+            queue.append(node.right)
+
+        index += 1
+
+    return root
