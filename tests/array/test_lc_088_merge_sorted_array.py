@@ -18,3 +18,9 @@ def test_normal_case_2():
 
 def test_normal_case_3():
     assert Solution().merge(nums1=[0], m=0, nums2=[1], n=1) == [1]
+
+
+def test_updates_nums1_in_place():
+    nums1 = [4, 5, 6, 0, 0, 0]
+    Solution().merge(nums1, 3, [1, 2, 3], 3)
+    assert nums1 == [1, 2, 3, 4, 5, 6]

@@ -1,7 +1,7 @@
 from collections import deque
 from typing import List
 
-from src.array.lc_108_convert_sorted_array_to_binary_search_tree import Solution, TreeNode
+from src.tree.lc_108_convert_sorted_array_to_binary_search_tree import Solution, TreeNode
 
 
 def levelorder(root: TreeNode) -> List:

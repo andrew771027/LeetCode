@@ -4,8 +4,8 @@ import pytest
 from hypothesis import given
 from hypothesis import strategies as st
 
-from src.stack.lc_590_n_ary_tree_postorder_traversal import Solution
-from tests.stack.utils.helper import Node, build_nary_tree
+from src.tree.lc_590_n_ary_tree_postorder_traversal import Solution
+from tests.tree.utils.helper import Node, list_to_nary_tree
 
 
 @pytest.mark.parametrize(
@@ -47,7 +47,7 @@ from tests.stack.utils.helper import Node, build_nary_tree
     ],
 )
 def test_normal_case_1(root, expected_result):
-    root: Node = build_nary_tree(root)
+    root: Node = list_to_nary_tree(root)
     assert Solution().postorder(root) == expected_result
 
 
@@ -93,7 +93,7 @@ def test_normal_case_1(root, expected_result):
     ],
 )
 def test_normal_case_2(root, expected_result):
-    root: Node = build_nary_tree(root)
+    root: Node = list_to_nary_tree(root)
     assert Solution().postorder(root) == expected_result
 
 

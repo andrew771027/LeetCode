@@ -1,7 +1,7 @@
 import pytest
 
-from src.stack.lc_094_binary_tree_inorder_traversal import Solution
-from tests.stack.utils.helper import TreeNode, list_to_tree
+from src.tree.lc_094_binary_tree_inorder_traversal import Solution
+from tests.tree.utils.helper import TreeNode, list_to_tree
 
 
 @pytest.mark.parametrize(

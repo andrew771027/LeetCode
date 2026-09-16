@@ -2,7 +2,7 @@ from typing import List
 
 import pytest
 
-from src.linkedlist.lc_160_interection_of_two_linked_lists import Solution
+from src.linkedlist.lc_160_intersection_of_two_linked_lists import Solution
 from tests.linkedlist.utils.helper import lists_to_interection_linkedlists
 
 

@@ -1,4 +1,4 @@
-from src.string.lc_020_valid_parentheses import Solution
+from src.stack.lc_020_valid_parentheses import Solution
 
 
 def test_normal_case_1():

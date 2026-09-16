@@ -1,4 +1,4 @@
-from src.array.lc_014_longest_common_prefix import Solution
+from src.string.lc_014_longest_common_prefix import Solution
 
 
 def test_normal_case():

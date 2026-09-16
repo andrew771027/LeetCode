@@ -11,3 +11,15 @@ def test_normal_case_2():
 
 def test_empty_case():
     assert Solution().removeDuplicates([]) == 0
+
+
+def test_compacted_prefix():
+    for values, expected in [
+        ([], []),
+        ([1, 1, 2], [1, 2]),
+        ([2, 2, 2], [2]),
+        ([1, 2, 3], [1, 2, 3]),
+    ]:
+        k = Solution().removeDuplicates(values)
+        assert k == len(expected)
+        assert values[:k] == expected

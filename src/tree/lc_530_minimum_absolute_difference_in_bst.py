@@ -11,7 +11,7 @@ class TreeNode:
 
 class Solution:
     def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
-        
+
         values = []
 
         self.inorder(root, values)
@@ -24,15 +24,12 @@ class Solution:
             min_difference = min(difference, min_difference)
 
         return min_difference
-    
+
     def inorder(self, node: Optional[TreeNode], values: list[int]) -> None:
 
-        if node is None
+        if node is None:
             return
-        
+
         self.inorder(node.left, values)
         values.append(node.val)
         self.inorder(node.right, values)
-
-
-        

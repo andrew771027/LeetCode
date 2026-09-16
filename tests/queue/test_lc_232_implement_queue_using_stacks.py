@@ -6,7 +6,7 @@ from hypothesis import given, settings
 from hypothesis import strategies as st
 from hypothesis.stateful import RuleBasedStateMachine, precondition, rule
 
-from src.stack.lc_232_implement_queue_using_stacks import MyQueue
+from src.queue.lc_232_implement_queue_using_stacks import MyQueue
 
 
 @pytest.mark.parametrize(
