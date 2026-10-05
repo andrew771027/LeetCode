@@ -49,4 +49,5 @@ source 與 test 使用相同 Group 及題號。Pattern 是教學分類；同一�
 | 559 | Easy | tree | [maximum_depth_of_n_ary_tree](../src/tree/lc_559_maximum_depth_of_n_ary_tree.py) / [test](../tests/tree/test_lc_559_maximum_depth_of_n_ary_tree.py) | [Pattern](patterns/tree-traversal.md) |
 | 589 | Easy | tree | [n_ary_tree_preorder_traversal](../src/tree/lc_589_n_ary_tree_preorder_traversal.py) / [test](../tests/tree/test_lc_589_n_ary_tree_preorder_traversal.py) | [Pattern](patterns/tree-traversal.md) |
 | 590 | Easy | tree | [n_ary_tree_postorder_traversal](../src/tree/lc_590_n_ary_tree_postorder_traversal.py) / [test](../tests/tree/test_lc_590_n_ary_tree_postorder_traversal.py) | [Pattern](patterns/tree-traversal.md) |
+| 783 | Easy | tree | [minimum_distance_between_bst_nodes](../src/tree/lc_783_minimum_distance_between_bst_nodes.py) / [test](../tests/tree/test_lc_783_minimum_distance_between_bst_nodes.py) | [Pattern](patterns/bst.md#783--minimum-distance-between-bst-nodes) |
 | 876 | Easy | linkedlist | [middle_of_linked_list](../src/linkedlist/lc_876_middle_of_linked_list.py) / [test](../tests/linkedlist/test_lc_876_middle_of_linked_list.py) | [Pattern](patterns/linked-list.md) |

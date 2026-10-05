@@ -11,7 +11,7 @@
 | linkedlist | 串列節點與連線操作 | 10 |
 | stack | 括號配對、實作 Stack | 2 |
 | queue | 實作 Queue | 1 |
-| tree | 二元樹、BST、N 元樹 | 13 |
+| tree | 二元樹、BST、N 元樹 | 14 |
 
 ## 這次調整
 
