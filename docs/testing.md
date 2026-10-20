@@ -25,6 +25,21 @@ assert nums[:k] == [1, 2]
 
 #88 要在呼叫後檢查 nums1。現有實作額外回傳 nums1，舊測試保留這個行為；新增案例驗證題目要求的原地修改。
 
+#283 必須保留非零元素順序，並把零放到尾端，因此比較完整陣列，不做排序。現有 8 組參數化案例也檢查回傳值為 `None`，以及呼叫前後 `id(nums)` 相同。
+
+```python
+from src.array.lc_283_move_zeroes import Solution
+
+nums = [0, 1, 0, 3, 12]
+original_id = id(nums)
+result = Solution().moveZeroes(nums)
+assert result is None
+assert nums == [1, 3, 12, 0, 0]
+assert id(nums) == original_id
+```
+
+完整結果可檢查非零順序與尾端的零；物件身分可檢查呼叫者仍持有原本的 list，但不能證明演算法只使用 O(1) 額外空間，空間成本仍要閱讀實作判斷。
+
 ## 節點值與節點身分
 
 #160 的 helper 讓兩條串列共用同一段尾端。測試使用 `actual is intersect_node`，不能只用 val 相等。#141 也需要把尾端真正接回前面的節點；值重複的線性串列不是環。
@@ -70,6 +85,7 @@ stateDiagram-v2
 
 ```bash
 poetry run pytest -q
+poetry run pytest tests/array/test_lc_283_move_zeroes.py -q
 poetry run pytest tests/queue/test_lc_232_implement_queue_using_stacks.py -q
 poetry run pytest tests/tree/test_lc_559_maximum_depth_of_n_ary_tree.py -q
 ```

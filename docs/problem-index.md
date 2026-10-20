@@ -43,6 +43,7 @@ source 與 test 使用相同 Group 及題號。Pattern 是教學分類；同一�
 | 234 | Easy | linkedlist | [palindrome_linked_list](../src/linkedlist/lc_234_palindrome_linked_list.py) / [test](../tests/linkedlist/test_lc_234_palindrome_linked_list.py) | [Pattern](patterns/two-pointers.md) |
 | 242 | Easy | string | [valid_anagram](../src/string/lc_242_valid_anagram.py) / [test](../tests/string/test_lc_242_valid_anagram.py) | [Pattern](patterns/hashing.md) |
 | 257 | Easy | tree | [binary_tree_paths](../src/tree/lc_257_binary_tree_paths.py) / [test](../tests/tree/test_lc_257_binary_tree_paths.py) | [Pattern](patterns/tree-traversal.md) |
+| 283 | Easy | array | [move_zeroes](../src/array/lc_283_move_zeroes.py) / [test](../tests/array/test_lc_283_move_zeroes.py) | [Pattern](patterns/two-pointers.md#283--move-zeroes) |
 | 404 | Easy | tree | [sum_of_left_leaves](../src/tree/lc_404_sum_of_left_leaves.py) / [test](../tests/tree/test_lc_404_sum_of_left_leaves.py) | [Pattern](patterns/tree-traversal.md) |
 | 501 | Easy | tree | [find_mode_in_binary_search_tree](../src/tree/lc_501_find_mode_in_binary_search_tree.py) / [test](../tests/tree/test_lc_501_find_mode_in_binary_search_tree.py) | [Pattern](patterns/hashing.md) |
 | 530 | Easy | tree | [minimum_absolute_difference_in_bst](../src/tree/lc_530_minimum_absolute_difference_in_bst.py) / [test](../tests/tree/test_lc_530_minimum_absolute_difference_in_bst.py) | [Pattern](patterns/bst.md) |
