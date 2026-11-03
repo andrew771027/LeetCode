@@ -10,6 +10,8 @@
 
 挑案例時，讓每組資料驗證不同理由：空樹驗證遞迴出口，只有根節點驗證葉節點，左右不對稱的樹驗證走訪順序。單純換一批數字通常不會增加太多檢查能力。
 
+#202 的 [10 組參數化案例](../tests/math/test_lc_202_happy_number.py) 使用 `actual is expected` 檢查布林結果，涵蓋起點為 1、經過多步到達 1，以及進入非 1 循環的輸入。停止條件的推理見[快慢指標筆記](patterns/cycle-detection.md)。另有 Hypothesis 交叉驗證，見下方說明；目前沒有效能量測。
+
 ## 原地修改：檢查有效內容
 
 #26、#27 原先只檢查回傳長度，現在也檢查修改後的前綴。否則即使程式回傳正確的 k，卻完全沒有寫入資料，測試仍可能通過。
@@ -56,6 +58,8 @@ assert id(nums) == original_id
 
 現有 #589、#590 生成 N 元樹，將迭代結果與測試內的遞迴參考解法比較。#559 則將三種最大深度實作與參考解法比較。這種做法也稱 differential testing：用不同實作交叉驗證同一份輸入。
 
+#202 的 `test_is_happy_property` 以 `st.integers(min_value=1, max_value=2**31 - 1)` 生成合法正整數，使用 `==` 比較 Floyd 解法與 source 中集合版 `is_happy_oracle` 的結果。集合版記錄已出現的狀態，在到達 1 或遇到重複值時停止；它會使用額外集合空間。生成範圍包含上界，但不保證每次都產生上界，也不代表窮舉所有輸入。兩版本的數位平方和運算相似，仍須搭配固定案例檢查。
+
 生成器將第 i 個節點接到索引小於 i 的父節點，既保持連通，也避免產生環。這樣生成的資料才符合樹的前提。#590 節點值使用索引；#559 另外生成整數值，因此兩者的資料範圍不完全相同。
 
 `@given` 提供輸入，`@st.composite` 允許依先前產生的大小建立資料。發現失敗時，Hypothesis 會嘗試縮小案例，幫助定位錯誤；不保證找到數學上最小的反例。
@@ -85,6 +89,7 @@ stateDiagram-v2
 
 ```bash
 poetry run pytest -q
+poetry run pytest tests/math/test_lc_202_happy_number.py -q
 poetry run pytest tests/array/test_lc_283_move_zeroes.py -q
 poetry run pytest tests/queue/test_lc_232_implement_queue_using_stacks.py -q
 poetry run pytest tests/tree/test_lc_559_maximum_depth_of_n_ary_tree.py -q

@@ -1,6 +1,6 @@
 # LeetCode Practice
 
-用 Python 練習解題，並用 pytest 與 Hypothesis 驗證結果。目前收錄 46 題：44 題 Easy、2 題 Medium，每題都有對應測試。
+用 Python 練習解題，並用 pytest 與 Hypothesis 驗證結果。目前收錄 47 題：45 題 Easy、2 題 Medium，每題都有對應測試。
 
 ## 開始練習
 
@@ -26,6 +26,7 @@ VS Code 的偵錯設定放在 `.vscode/launch.json`。`args` 可指定測試檔�
 src/                 解法，依題目主體分類
   array/
   string/
+  math/
   linkedlist/
   stack/
   queue/
@@ -47,6 +48,7 @@ docs/
 - [題目總表](docs/problem-index.md)：按題號找解法與測試。
 - [測試方法](docs/testing.md)：了解原地修改、節點身分、Hypothesis 與操作序列。
 - [雙指標 Pattern](docs/patterns/two-pointers.md)：比較 #27 的有效前綴與 #283 的保序交換。
+- [快慢指標與循環偵測](docs/patterns/cycle-detection.md)：#202 的數位平方和、循環判定與集合版交叉驗證。
 - [BST Pattern](docs/patterns/bst.md)：#530 與 #783 的相鄰差比較，對照陣列與 `previous` 解法。
 - [鏈結串列 Pattern](docs/patterns/linked-list.md)：節點接線、快慢指標，以及 Medium 題目 #19、#61。
 

@@ -34,6 +34,7 @@ source 與 test 使用相同 Group 及題號。Pattern 是教學分類；同一�
 | 160 | Easy | linkedlist | [intersection_of_two_linked_lists](../src/linkedlist/lc_160_intersection_of_two_linked_lists.py) / [test](../tests/linkedlist/test_lc_160_intersection_of_two_linked_lists.py) | [Pattern](patterns/linked-list.md) |
 | 168 | Easy | string | [excel_sheet_column_title](../src/string/lc_168_excel_sheet_column_title.py) / [test](../tests/string/test_lc_168_excel_sheet_column_title.py) | [Pattern](patterns/simulation.md) |
 | 171 | Easy | string | [excel_sheet_column_number](../src/string/lc_171_excel_sheet_column_number.py) / [test](../tests/string/test_lc_171_excel_sheet_column_number.py) | [Pattern](patterns/simulation.md) |
+| 202 | Easy | math | [happy_number](../src/math/lc_202_happy_number.py) / [test](../tests/math/test_lc_202_happy_number.py) | [Pattern](patterns/cycle-detection.md) |
 | 203 | Easy | linkedlist | [remove_linked_list_elements](../src/linkedlist/lc_203_remove_linked_list_elements.py) / [test](../tests/linkedlist/test_lc_203_remove_linked_list_elements.py) | [Pattern](patterns/linked-list.md) |
 | 205 | Easy | string | [isomorphic_strings](../src/string/lc_205_isomorphic_strings.py) / [test](../tests/string/test_lc_205_isomorphic_strings.py) | [Pattern](patterns/hashing.md) |
 | 206 | Easy | linkedlist | [reverse_linked_list](../src/linkedlist/lc_206_reverse_linked_list.py) / [test](../tests/linkedlist/test_lc_206_reverse_linked_list.py) | [Pattern](patterns/linked-list.md) |

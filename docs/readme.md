@@ -1,6 +1,6 @@
 # LeetCode 學習筆記
 
-從目前的解法出發，理解為什麼可行，再用測試檢查推理。筆記涵蓋 44 題 Easy 與 2 題 Medium，統一依 Pattern 編排；#19 和 #61 收錄於鏈結串列筆記並標示難度。
+從目前的解法出發，理解為什麼可行，再用測試檢查推理。筆記涵蓋 45 題 Easy 與 2 題 Medium，統一依 Pattern 編排；#19 和 #61 收錄於鏈結串列筆記並標示難度。
 
 ## Pattern 是什麼？
 
@@ -30,6 +30,7 @@ poetry run pytest tests/array/test_lc_026_remove_duplicates_from_sorted_array.py
 | --- | --- | --- |
 | [線性掃描與字串處理](patterns/linear-scan.md) | 1, 13, 14, 28, 58 | 每輪處理什麼，以及重複搜尋的成本 |
 | [雙指標與原地寫入](patterns/two-pointers.md) | 26, 27, 88, 125, 234, 283 | 讀取位置、寫入位置與有效區間 |
+| [快慢指標與循環偵測](patterns/cycle-detection.md) | 202 | 將數值轉換視為狀態序列，以集合版交叉驗證快慢指標 |
 | [二分搜尋](patterns/binary-search.md) | 35 | 每次能排除哪一半 |
 | [查表、計數與出現位置](patterns/hashing.md) | 205, 242, 501 | 需要記住頻率還是位置 |
 | [鏈結串列：快慢指標與重新接線](patterns/linked-list.md) | 19（Medium）, 21, 61（Medium）, 83, 141, 160, 203, 206, 876 | 節點身分、速度差和連線保存 |
