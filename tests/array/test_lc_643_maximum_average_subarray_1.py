@@ -50,7 +50,7 @@ def find_max_average_oracle(
 ) -> float:
     
     return max(
-        sum[i+i + k] / k
+        sum(nums[i:i + k]) / k
         for i in range(len(nums) - k + 1)
         )
 
