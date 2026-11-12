@@ -1,6 +1,6 @@
 import pytest
 
-from src.array.lc_643_maximum_average_subarray_1 import Solution
+from src.sliding_window.lc_643_maximum_average_subarray_1 import Solution
 from hypothesis import given, strategies as st
 
 @pytest.mark.parametrize(

@@ -2,7 +2,7 @@ import pytest
 
 from itertools import combinations
 from hypothesis import given, strategies as st
-from src.array.lc_594_longest_harmonious_subsequence import Solution
+from src.sliding_window.lc_594_longest_harmonious_subsequence import Solution
 
 
 
