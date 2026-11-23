@@ -10,7 +10,7 @@
 
 挑案例時，讓每組資料驗證不同理由：空樹驗證遞迴出口，只有根節點驗證葉節點，左右不對稱的樹驗證走訪順序。單純換一批數字通常不會增加太多檢查能力。
 
-#202 的 [10 組參數化案例](../tests/math/test_lc_202_happy_number.py) 使用 `actual is expected` 檢查布林結果，涵蓋起點為 1、經過多步到達 1，以及進入非 1 循環的輸入。停止條件的推理見[快慢指標筆記](patterns/cycle-detection.md)。另有 Hypothesis 交叉驗證，見下方說明；目前沒有效能量測。
+#202 的 10 組參數化案例使用 `actual is expected` 檢查回傳值是否為預期的 `True` 或 `False`。案例涵蓋起點為 1、經過多步到達 1，以及進入非 1 循環的輸入。[測試程式](../tests/math/test_lc_202_happy_number.py) · [快慢指標筆記](patterns/cycle-detection.md)
 
 ## 原地修改：檢查有效內容
 
